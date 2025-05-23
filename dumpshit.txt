@@ -11,11 +11,11 @@ Game flow ->
 	the game will start from a basic room {shop} where player can choose their starting stuff then -> [game idea] -> in middle there will be chance where player can visit the shop upgrade things...
 
 Idea that i have ->
-	as player progress it they will collect stuff so they can use that stuff to upgrade there self and their wapons like
+	as player progress it they will collect stuff so they can use that stuff to upgrade their self and their wapons like
 									-> one more extra heart
 									-> one more wapon
 									-> things like that (i ran out of idea)
 
 How i want this to look like ->
 	A big square (room).. bunch of enemies, coverwalls, chests, kill all the enemy, move
-	
+
