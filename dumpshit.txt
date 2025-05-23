@@ -1,0 +1,21 @@
+Hi here i am going to write what i think or if i say in professional way this is where i am going to plan things or this is my GDD
+
+GAME NAME -> Omega
+Tech -> c, raylib, computer
+art -> stealing from others {kenney}
+
+Game idea ->
+	i am thinking of an rpg game where you have only one chance one health one weapon one way movement but the twist is this is going to be a room gen based game means you have to clear a room to get to the next room and each room will have it's own enemy type.. difficultly and all blah blah blah
+
+Game flow ->
+	the game will start from a basic room {shop} where player can choose their starting stuff then -> [game idea] -> in middle there will be chance where player can visit the shop upgrade things...
+
+Idea that i have ->
+	as player progress it they will collect stuff so they can use that stuff to upgrade there self and their wapons like
+									-> one more extra heart
+									-> one more wapon
+									-> things like that (i ran out of idea)
+
+How i want this to look like ->
+	A big square (room).. bunch of enemies, coverwalls, chests, kill all the enemy, move
+	
