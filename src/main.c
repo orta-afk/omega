@@ -1,8 +1,11 @@
 #include "raylib.h"
+#include "manager.h"
 #include "entity.h"
 #include "shopRoom.h"
 
 int main(){
+  states state = mainMenu;
+  
   InitWindow(640, 320, "omega");
 
   entity entity;
@@ -12,15 +15,33 @@ int main(){
   initEntity(&entity);
   initEntityTexture(&et);
   initShop(&shoproom);
+  initManager();
 
   while(!WindowShouldClose()){
-    updateEntity(&entity, &et);
-    updateShop(&shoproom);
+    updateManager();
 
+    states s = getState();
+    if(s == mainMenu){
+      updateMainMenu();  
+    } else if(s == game){
+      updateEntity(&entity, &et);
+    } else if(s == shop){
+      updateShop(&shoproom);
+    } else if(s == death){
+      updateDeath();
+    }
+    
     BeginDrawing();
     ClearBackground(BLACK);
-    drawShop(&shoproom);
-    drawEntity(&et);
+    if(s == mainMenu){
+      drawMainMenu();  
+    } else if(s == game){
+      drawEntity(&entity, &et);
+    } else if(s == shop){
+      drawShop(&shoproom);
+    } else if(s == death){
+      drawDeath();
+    }
     EndDrawing();
   }
 

@@ -1,5 +1,4 @@
 #include "entity.h"
-#include <raylib.h>
 
 void initEntity(entity *entity){
   entity->velocity = (Vector2){0,0};
