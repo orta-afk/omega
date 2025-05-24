@@ -3,6 +3,7 @@
 
 #include "raylib.h"
 #include "entity.h"
+#include "tilemap.h"
 
 typedef struct window{
   int width;
@@ -14,6 +15,7 @@ typedef struct window{
 typedef struct game{
   entity entity;   
   entityTexture entitytexture;
+  tilemap tilemap;
 }game;
 
 void init(game* game, window* window);

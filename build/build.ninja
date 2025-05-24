@@ -71,6 +71,15 @@ build CMakeFiles/Omega.dir/src/main.c.o: C_COMPILER__Omega_unscanned_ /home/kaid
   TARGET_COMPILE_PDB = CMakeFiles/Omega.dir/
   TARGET_PDB = Omega.pdb
 
+build CMakeFiles/Omega.dir/src/tilemap.c.o: C_COMPILER__Omega_unscanned_ /home/kaido/Projects/omega/src/tilemap.c || cmake_object_order_depends_target_Omega
+  DEP_FILE = CMakeFiles/Omega.dir/src/tilemap.c.o.d
+  FLAGS = -std=gnu99
+  INCLUDES = -I/home/kaido/Projects/omega/includes
+  OBJECT_DIR = CMakeFiles/Omega.dir
+  OBJECT_FILE_DIR = CMakeFiles/Omega.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/Omega.dir/
+  TARGET_PDB = Omega.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Omega
@@ -79,7 +88,7 @@ build CMakeFiles/Omega.dir/src/main.c.o: C_COMPILER__Omega_unscanned_ /home/kaid
 #############################################
 # Link the executable Omega
 
-build Omega: C_EXECUTABLE_LINKER__Omega_ CMakeFiles/Omega.dir/src/entity.c.o CMakeFiles/Omega.dir/src/game.c.o CMakeFiles/Omega.dir/src/main.c.o
+build Omega: C_EXECUTABLE_LINKER__Omega_ CMakeFiles/Omega.dir/src/entity.c.o CMakeFiles/Omega.dir/src/game.c.o CMakeFiles/Omega.dir/src/main.c.o CMakeFiles/Omega.dir/src/tilemap.c.o
   DEP_FILE = CMakeFiles/Omega.dir/link.d
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/Omega.dir/link.d
   LINK_LIBRARIES = -Wl,-rpath,/home/kaido/Projects/omega/lib  -lraylib  -lm  -ldl  -lpthread  -lGL  -lX11  -lXrandr  -lXi  -lXxf86vm  -lXcursor
