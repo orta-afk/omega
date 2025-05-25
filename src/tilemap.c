@@ -1,5 +1,4 @@
 #include "tilemap.h"
-#include <raylib.h>
 
 int map[WIDTH][HEIGHT];
 
@@ -14,14 +13,14 @@ void updateTilemap(tilemap *tilemap){
   int screenTilesX = WIDTH;  
   int screenTilesY = HEIGHT;
 
-  int left   = (screenTilesX / 2);
-  int right  = (screenTilesX / 2);
-  int top    = (screenTilesY / 2);
-  int bottom = (screenTilesY / 2);
+  int left   = (screenTilesX / 2) - 1;
+  int right  = (screenTilesX / 2) + 1;
+  int top    = (screenTilesY / 2) - 1; 
+  int bottom = (screenTilesY / 2) + 1;
 
   for (int i = 0; i < WIDTH; i++) {
     for (int j = 0; j < HEIGHT; j++) {
-      if (i >= 3 && i <= 37 && j >= 3 && j <= 17) {
+      if (i >= 5 && i <= 35 && j >= 4 && j <= 16) {
         if(i >= left && i <= right && j >= top && j <= bottom){
           map[i][j] = backgroundTile;
         }else{
@@ -40,15 +39,14 @@ void drawTilemap(tilemap *tilemap) {
     for (int j = 0; j < HEIGHT; j++) {
       int currentTile = map[i][j];
       tilemap->tile = currentTile;
-
       switch (currentTile) {
         case backgroundTile:
           tilemap->indexX = 0;
           tilemap->indexY = 0;
           break;
         case tile:
-          tilemap->indexX = 0;
-          tilemap->indexY = 13;
+          tilemap->indexX = 17;
+          tilemap->indexY = 0;
           break;
       }
       tilemap->source = (Rectangle){

@@ -1,4 +1,5 @@
 #include "game.h"
+#include "tilemap.h"
 
 void init(game *game, window* window){
   window->width = 640;
@@ -15,12 +16,6 @@ void init(game *game, window* window){
 void update(game* game){
   updateEntity(&game->entity, &game->entitytexture);
   updateTilemap(&game->tilemap);
-  while(!WindowShouldClose()){
-    BeginDrawing();
-    ClearBackground(BLACK);
-    draw(game);
-    EndDrawing();
-  }
 }
 
 void draw(game* game){

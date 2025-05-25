@@ -2,9 +2,11 @@
 #define ENTITY_H
 
 #include "raylib.h"
+#include <stdio.h>
 #define SIZE 16
 
 typedef struct entity{
+  int step;
   Vector2 velocity;
   Vector2 positions; 
 }entity;

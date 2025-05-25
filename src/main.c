@@ -1,11 +1,19 @@
 #include "game.h"
 
-int main(){
-  game game;
-  window window;
+int main() {
+    game game;
+    window window;
 
-  init(&game, &window);
-  update(&game);
-  draw(&game);
-  destroy(&game);
+    init(&game, &window);
+
+    while (!WindowShouldClose()) {
+        update(&game);   
+        BeginDrawing();
+        ClearBackground(BLACK);
+        draw(&game);     
+        EndDrawing();
+    }
+
+    destroy(&game);
+    return 0;
 }
