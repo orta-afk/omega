@@ -2,7 +2,6 @@
 
 void initEntity(entity *entity){
   entity->step = 16;
-  entity->velocity = (Vector2){0,0};
   entity->positions = (Vector2){GetScreenWidth()/2.0f,GetScreenHeight()/2.0f};
 }
 
@@ -19,17 +18,16 @@ void initEntityTexture(entityTexture *et){
 }
 
 void move(entity* entity) {
-    if (IsKeyPressed(KEY_W)) {
-        entity->positions.y -= entity->step;
-    } else if (IsKeyPressed(KEY_S)) {
-        entity->positions.y += entity->step;
-    } else if (IsKeyPressed(KEY_A)) {
-        entity->positions.x -= entity->step;
-    } else if (IsKeyPressed(KEY_D)) {
-        entity->positions.x += entity->step;
-    }
+  if (IsKeyPressed(KEY_W)) {
+      entity->positions.y -= entity->step;
+  } else if (IsKeyPressed(KEY_S)) {
+      entity->positions.y += entity->step;
+  } else if (IsKeyPressed(KEY_A)) {
+      entity->positions.x -= entity->step;
+  } else if (IsKeyPressed(KEY_D)) {
+      entity->positions.x += entity->step;
+  }
 }
-
 
 void updateEntity(entity *entity, entityTexture *et){
   move(entity);

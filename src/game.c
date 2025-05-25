@@ -1,9 +1,8 @@
 #include "game.h"
-#include "tilemap.h"
 
 void init(game *game, window* window){
-  window->width = 640;
-  window->height = 320;
+  window->width = 1280;
+  window->height = 640;
   window->title = "omega";
   window->color = BLACK;
   InitWindow(window->width, window->height, window->title);
