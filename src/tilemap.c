@@ -20,7 +20,7 @@ void updateTilemap(tilemap *tilemap){
 
   for (int i = 0; i < WIDTH; i++) {
     for (int j = 0; j < HEIGHT; j++) {
-      if (i >= 5 && i <= 35 && j >= 4 && j <= 16) {
+      if (i >= 6 && i <= 35 && j >= 2 && j <= 17) {
         if(i >= left && i <= right && j >= top && j <= bottom){
           map[i][j] = backgroundTile;
         }else{

@@ -2,7 +2,7 @@
 
 void initEntity(entity *entity){
   entity->step = 16;
-  entity->positions = (Vector2){GetScreenWidth()/2.0f,GetScreenHeight()/2.0f};
+  entity->positions = (Vector2){640/2,320/2};
 }
 
 void initEntityTexture(entityTexture *et){
